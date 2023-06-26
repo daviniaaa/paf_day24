@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error Page</title>
+    </head>
+    <!-- <body data-th:object="${errorMessage}">
+        <label for="statusCode">Status Code: </label>
+        <span data-th:text="${errorMessage.statusCode}"></span><br>
+
+        <label for="timestamp">Timestamp: </label>
+        <span data-th:text="${errorMessage.timestamp}"></span><br>
+
+        <label for="message">Message: </label>
+        <span data-th:text="${errorMessage.message}"></span><br>
+
+        <label for="description">Description: </label>
+        <span data-th:text="${errorMessage.description}"></span><br>
+    </body> -->
+    <body th:object="${errorMessage}">
+        <label for="statusCode">Status Code</label>
+        <span th:text="${errorMessage.statusCode}"></span>
+        <br />
+        <label for="timeStamp">Timestamp of occurrence</label>
+        <span th:text="${errorMessage.timeStamp}"></span>
+        <br />
+        <label for="message">Message</label>
+        <span th:text="${errorMessage.message}"></span>
+        <br />
+        <label for="description">Description</label>
+        <span th:text="${errorMessage.description}"></span>
+        <br />
+    </body>
+</html>
